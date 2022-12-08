@@ -1,0 +1,19 @@
+
+<h1>Liste des Utilisateurs</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+  </tr>
+    <tr *ngFor="let u of listUsers"> 
+    <td>{{u.id}}</td>
+    <td> {{u.name}}  </td>
+    <td> {{u.username}}</td>
+    <td>{{u.email}}</td>
+    <td><a routerLink="/detailtod/{{u.id}}">Voir Todo</a></td> 
+  </tr>
+</table>
+

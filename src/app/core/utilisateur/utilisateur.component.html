@@ -1,0 +1,23 @@
+
+<h1>Liste des Utilisateurs</h1>
+<pre><input type="text" [(ngModel)]="usern"/>  <button (click)="username()">Vérifier</button></pre>
+<pre *ngIf="verifier==true">
+le nombre d'utilisateurs ayant le username " {{usern}} " est : {{nbrusers}}
+</pre>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+  </tr>
+    <tr *ngFor="let u of listUsers"> 
+    <td>{{u.id}}</td>
+    <td> {{u.name}}  </td>
+    <td> {{u.username}}</td>
+    <td>{{u.email}}</td> 
+  
+
+  </tr>
+</table>
+
